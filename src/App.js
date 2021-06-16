@@ -18,7 +18,7 @@ class App extends Component {
     filter: '',
   };
 
-  contactCheck = subContact => {
+  duplicateContactCheck = subContact => {
     const value = subContact.name.toLowerCase();
     const nameCheck = this.state.contacts.find(contact =>
       contact.name.toLowerCase().includes(value),
@@ -45,8 +45,9 @@ class App extends Component {
     this.setState({ filter: value });
   };
 
-  handleFilterRender = () => {
+  handleFilteredContacts = () => {
     const { filter, contacts } = this.state;
+
     const normalizedFilter = filter.toLowerCase();
 
     return contacts.filter(contact =>
@@ -62,13 +63,13 @@ class App extends Component {
 
   render() {
     const { filter } = this.state;
-    const filteredContacts = this.handleFilterRender();
+    const filteredContacts = this.handleFilteredContacts();
 
     return (
       <>
         <div className={styles.App}>
           <h1 className={styles.header}>Phonebook</h1>
-          <ContactForm onSubmit={this.contactCheck} />
+          <ContactForm onSubmit={this.duplicateContactCheck} />
 
           <h2 className={styles.header}>Contacts</h2>
           <Filter value={filter} onChange={this.handleChange} />

@@ -14,6 +14,7 @@
     0px 0px 22px 20px rgba(187, 13, 188, 0.28);
   box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
     0px 0px 22px 20px rgba(187, 13, 188, 0.28);
+  border-radius: 10px;
 }
 
 .ContactList_text {
