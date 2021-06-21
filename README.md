@@ -1,3 +1,3 @@
-# goit-react-hw-03-phonebook
+# goit-react-hw-02-phonebook
 
-Репозиторий для сдачи ДЗ по REACT #3
+Репозиторий для сдачи ДЗ по REACT #2
